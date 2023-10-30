@@ -98,11 +98,11 @@
       <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-window.lib;sfml-graphics.lib;sfml-system.lib;sfml-network.lib</AdditionalDependencies>
+      <AdditionalDependencies>sfml-window.lib;sfml-graphics.lib;sfml-system.lib;sfml-network.lib;sfml-audio.lib;sfml-main.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -137,7 +137,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CardDealer.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MonoBehaviour.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SpriteButton.cpp" />
+    <ClCompile Include="TextButton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CardController.hpp" />
+    <ClInclude Include="CardDealer.hpp" />
+    <ClInclude Include="GameManager.hpp" />
+    <ClInclude Include="SpriteButton.hpp" />
+    <ClInclude Include="GameObject.hpp" />
+    <ClInclude Include="GameScene.hpp" />
+    <ClInclude Include="MenuScene.hpp" />
+    <ClInclude Include="MonoBehaviour.hpp" />
+    <ClInclude Include="Scene.hpp" />
+    <ClInclude Include="TextButton.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
